@@ -1,0 +1,120 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="WowthingAutoUploader.MainWindow"
+        Title="WowthingAutoUploader"
+        d:DesignWidth="400"
+        d:DesignHeight="400"
+        MinHeight="400"
+        MinWidth="400"
+        Width="400"
+        Height="400"
+    >
+    <Grid
+        RowDefinitions="Auto, Auto, *"
+        ColumnDefinitions="*"
+        Margin="12 8 12 12"
+        RowSpacing="10"
+    >
+        <HeaderedContentControl Header="Settings">
+            <StackPanel>
+                <Grid
+                    RowDefinitions="Auto, Auto"
+                    ColumnDefinitions="Auto, *"
+                    Margin="5 0"
+                >
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0 0 5 0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                    >
+                        WoW Folder
+                    </Label>
+                    <TextBox
+                        Name="WowFolder"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0 5"
+                        IsEnabled="False"
+                        IsReadOnly="True"
+                        Text="Click to select..."
+                        Tapped="HandleWowFolderTapped"
+                    />
+                    <Label
+                        Name="ApiKey"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="0 0 5 0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                    >
+                        API Key
+                    </Label>
+                    <TextBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0 5"
+                    />
+                </Grid>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Spacing="10"
+                >
+                    <CheckBox
+                        Name="StartMinimized"
+                        IsEnabled="False"
+                    >Start minimized</CheckBox>
+                    <CheckBox
+                        Name="OpenOnStartup"
+                        IsEnabled="False"
+                    >Open on startup</CheckBox>
+                </StackPanel>
+            </StackPanel>
+        </HeaderedContentControl>
+        <HeaderedContentControl
+            Grid.Row="1"
+            Header="Status"
+        >
+            Status goes here
+        </HeaderedContentControl>
+        <Border
+            Grid.Row="2"
+            BorderBrush="{DynamicResource SystemControlForegroundBaseMediumBrush}"
+            BorderThickness="1"
+            CornerRadius="4"
+            TextElement.Foreground="{DynamicResource TextControlForeground}"
+        >
+            <ScrollViewer AllowAutoHide="False">
+                <SelectableTextBlock
+                    Name="Output"
+                    Background="{DynamicResource TextControlBackground}"
+                    FontFamily="{StaticResource RobotoMonoFont}"
+                    Padding="2"
+                    TextWrapping="Wrap"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    xml:space="preserve"
+                >[11:22:33] Meow
+[11:22:33] Meow
+[11:22:33] Meow
+[11:22:33] Meow
+[11:22:33] Meow
+[11:22:33] Meow
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof
+[22:33:44] Woof</SelectableTextBlock>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>
