@@ -59,3 +59,4 @@ nunit-*.xml
 # This project!
 publish/
 .idea/
+**/*.DotSettings.user
