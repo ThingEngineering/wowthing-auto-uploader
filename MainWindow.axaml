@@ -10,75 +10,71 @@
         MinHeight="400"
         MinWidth="400"
         Width="400"
-        Height="400"
-    >
+        Height="400">
     <Grid
         RowDefinitions="Auto, Auto, *"
         ColumnDefinitions="*"
         Margin="12 8 12 12"
-        RowSpacing="10"
-    >
+        RowSpacing="10">
         <HeaderedContentControl Header="Settings">
             <StackPanel>
                 <Grid
                     RowDefinitions="Auto, Auto"
                     ColumnDefinitions="Auto, *"
-                    Margin="5 0"
-                >
+                    Margin="5 0">
                     <Label
                         Grid.Row="0"
                         Grid.Column="0"
                         Margin="0 0 5 0"
                         HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                    >
+                        VerticalAlignment="Center">
                         WoW Folder
                     </Label>
                     <TextBox
                         Name="WowFolder"
                         Grid.Row="0"
                         Grid.Column="1"
+                        Background="{DynamicResource TextControlBackgroundDisabled}"
                         Margin="0 5"
-                        IsEnabled="False"
+                        IsEnabled="True"
                         IsReadOnly="True"
                         Text="Click to select..."
-                        Tapped="HandleWowFolderTapped"
-                    />
+                        Tapped="WowFolder_OnTapped" />
                     <Label
-                        Name="ApiKey"
                         Grid.Row="1"
                         Grid.Column="0"
                         Margin="0 0 5 0"
                         HorizontalAlignment="Right"
-                        VerticalAlignment="Center"
-                    >
+                        VerticalAlignment="Center">
                         API Key
                     </Label>
                     <TextBox
+                        Name="ApiKey"
                         Grid.Row="1"
                         Grid.Column="1"
                         Margin="0 5"
-                    />
+                        PasswordChar="*"
+                        TextChanged="ApiKey_OnTextChanged" />
                 </Grid>
                 <StackPanel
                     Orientation="Horizontal"
-                    Spacing="10"
-                >
+                    Spacing="10">
                     <CheckBox
                         Name="StartMinimized"
-                        IsEnabled="False"
-                    >Start minimized</CheckBox>
+                        IsEnabled="False">
+                        Start minimized
+                    </CheckBox>
                     <CheckBox
                         Name="OpenOnStartup"
-                        IsEnabled="False"
-                    >Open on startup</CheckBox>
+                        IsEnabled="False">
+                        Open on startup
+                    </CheckBox>
                 </StackPanel>
             </StackPanel>
         </HeaderedContentControl>
         <HeaderedContentControl
             Grid.Row="1"
-            Header="Status"
-        >
+            Header="Status">
             Status goes here
         </HeaderedContentControl>
         <Border
@@ -86,8 +82,7 @@
             BorderBrush="{DynamicResource SystemControlForegroundBaseMediumBrush}"
             BorderThickness="1"
             CornerRadius="4"
-            TextElement.Foreground="{DynamicResource TextControlForeground}"
-        >
+            TextElement.Foreground="{DynamicResource TextControlForeground}">
             <ScrollViewer AllowAutoHide="False">
                 <SelectableTextBlock
                     Name="Output"
@@ -97,8 +92,7 @@
                     TextWrapping="Wrap"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
-                    xml:space="preserve"
-                >[11:22:33] Meow
+                    xml:space="preserve">[11:22:33] Meow
 [11:22:33] Meow
 [11:22:33] Meow
 [11:22:33] Meow
