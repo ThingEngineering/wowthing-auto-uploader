@@ -91,23 +91,7 @@
                     Padding="2"
                     TextWrapping="Wrap"
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"
-                    xml:space="preserve">[11:22:33] Meow
-[11:22:33] Meow
-[11:22:33] Meow
-[11:22:33] Meow
-[11:22:33] Meow
-[11:22:33] Meow
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof
-[22:33:44] Woof</SelectableTextBlock>
+                    VerticalAlignment="Stretch" />
             </ScrollViewer>
         </Border>
     </Grid>

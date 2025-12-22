@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace WowthingAutoUploader;
 
 public class UploaderConfig
@@ -9,4 +11,6 @@ public class UploaderConfig
     public int WindowY { get; set; } = 100;
     public string ApiKey { get; set; } = string.Empty;
     public string WowFolder { get; set; } = string.Empty;
+
+    public Dictionary<string, int> LastUploaded { get; set; } = new();
 }
